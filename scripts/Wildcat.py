@@ -41,7 +41,7 @@ monitor.append(('*WCUT', 0.95, '*SHUTIN'))
 
 group = 'PRODUCTION'
 
-geometry = ('*K', 0.108, 0.370, 1.0, 0.0)
+geometry = ('*K', 0.0762, 0.370, 1.0, 0.0)
 
 perf = '*GEOA'
 
@@ -51,6 +51,6 @@ on_time = 1.0
 
 icv_nr = 0
 
-icv_start = (2008, 183, 200)
+icv_start = []
 
-icv_control = [(('*ON_CTRLLUMP __LAYER__ *GOR > 750','AND','*ON_CTRLLUMP _LAYER_ *GOR < 1250',0.0),('*ON_CTRLLUMP __LAYER__ *WCUT > 0.95',0.0))]*icv_nr
+icv_control = []*icv_nr

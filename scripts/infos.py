@@ -1,5 +1,5 @@
 prods_lst = [ 'PRK014','PRK028','PRK045','PRK052','PRK060','PRK061'
-             ,'PRK083','PRK084','PRK085','PWILDC'
+             ,'PRK083','PRK084','PRK085','Wildcat'
              ]
 
 injes_lst = [  'IRK004', 'IRK028', 'IRK029', 'IRK036'
