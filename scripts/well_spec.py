@@ -198,6 +198,8 @@ class Well_Spec:
     @handle_lst
     def _load_time_open(self, lst):
         self.time_open = lst.pop().split(',')
+        if len(self.time_open) == 1:
+            self.time_open = self.time_open.pop()
 
     @handle_lst
     def _load_time_on(self, lst):
