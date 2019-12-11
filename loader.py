@@ -1,17 +1,18 @@
-from .well_spec import Well_Spec
+from .scripts.well_spec import Well_Spec
 
 
 prod_lst = []
-prod_lst.append(Well_Spec(name='PRK014', nr_icv=3))
-prod_lst.append(Well_Spec(name='PRK028', nr_icv=2))
-prod_lst.append(Well_Spec(name='PRK045', nr_icv=3))
-prod_lst.append(Well_Spec(name='PRK052', nr_icv=2))
-prod_lst.append(Well_Spec(name='PRK060', nr_icv=2))
-prod_lst.append(Well_Spec(name='PRK061', nr_icv=3))
-prod_lst.append(Well_Spec(name='PRK083', nr_icv=3))
-prod_lst.append(Well_Spec(name='PRK084', nr_icv=2))
-prod_lst.append(Well_Spec(name='PRK085', nr_icv=3))
+prod_lst.append(Well_Spec(name='PRK014'))
+prod_lst.append(Well_Spec(name='PRK028'))
+prod_lst.append(Well_Spec(name='PRK045'))
+prod_lst.append(Well_Spec(name='PRK052'))
+prod_lst.append(Well_Spec(name='PRK060'))
+prod_lst.append(Well_Spec(name='PRK061'))
+prod_lst.append(Well_Spec(name='PRK083'))
+prod_lst.append(Well_Spec(name='PRK084'))
+prod_lst.append(Well_Spec(name='PRK085'))
 prod_lst.append(Well_Spec(name='Wildcat'))
+
 
 inje_lst = []
 inje_lst.append(Well_Spec(name='IRK004',alias_lst=['IRK004_G','IRK004_W']))
