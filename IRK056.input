@@ -4,7 +4,7 @@ INJECTION
 
 ###OPERATE###
 G, *MAX, *STG, 3000000.0, *CONT *REPEAT
-G, *MAX, *BHP,     540.0, *CONT *REPEAT
+G, *MAX, *BHP,     480.0, *CONT *REPEAT
 W, *MAX, *STW,    5000.0, *CONT *REPEAT
 W, *MAX, *BHP,     470.0, *CONT *REPEAT
 ###END###
@@ -34,10 +34,10 @@ W, *MAX, *BHP,     470.0, *CONT *REPEAT
 41, 51, 11, 1.0, *OPEN
 41, 51, 12, 1.0, *OPEN
 41, 51, 13, 1.0, *OPEN
-41, 51, 14, 1.0, *CLOSED
-41, 51, 15, 1.0, *CLOSED
-41, 51, 16, 1.0, *OPEN
-41, 51, 17, 1.0, *OPEN
+41, 51, 14, 1.0, *OPEN
+41, 51, 15, 1.0, *OPEN
+41, 51, 16, 1.0, *CLOSED
+41, 51, 17, 1.0, *CLOSED
 41, 51, 18, 1.0, *OPEN
 41, 51, 19, 1.0, *OPEN
 41, 51, 20, 1.0, *OPEN
@@ -54,12 +54,12 @@ W, *MAX, *BHP,     470.0, *CONT *REPEAT
 ###END###
 
 ###LAYERCLUMP###
-41, 51, 01:13
-41, 51, 16:30
+41, 51, 01:15
+41, 51, 18:30
 ###END###
 
 ###TIME_OPEN###
-G, 1461
+G, 1339
 ###END###
 
 ###TIME_ON###
