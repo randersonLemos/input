@@ -100,67 +100,67 @@ class Well_Spec:
 
     @handle_assignment
     def load_group(self):
-        lst = self._data_picker('###GROUP###', self.file)
+        lst = self._data_picker('---GROUP---', self.file)
         self._load_group(lst)
 
     @handle_assignment
     def load_operate(self):
-        lst = self._data_picker('###OPERATE###', self.file)
+        lst = self._data_picker('---OPERATE---', self.file)
         self._load_operate(lst)
 
     @handle_assignment
     def load_monitor(self):
-        lst = self._data_picker('###MONITOR###', self.file)
+        lst = self._data_picker('---MONITOR---', self.file)
         self._load_monitor(lst)
 
     @handle_assignment
     def load_geometry(self):
-        lst = self._data_picker('###GEOMETRY###', self.file)
+        lst = self._data_picker('---GEOMETRY---', self.file)
         self._load_geometry(lst)
 
     @handle_assignment
     def load_perf_ff(self):
-        lst = self._data_picker('###PERF_FF###', self.file)
+        lst = self._data_picker('---PERF_FF---', self.file)
         self._load_perf_ff(lst)
 
     @handle_assignment
     def load_perf_table(self):
-        lst = self._data_picker('###PERF_TABLE###', self.file)
+        lst = self._data_picker('---PERF_TABLE---', self.file)
         self._load_perf_table(lst)
 
     @handle_assignment
     def load_layerclump(self):
-        lst = self._data_picker('###LAYERCLUMP###', self.file)
+        lst = self._data_picker('---LAYERCLUMP---', self.file)
         self._load_layerclump(lst)
 
     @handle_assignment
     def load_time_open(self):
-        lst = self._data_picker('###TIME_OPEN###', self.file)
+        lst = self._data_picker('---TIME_OPEN---', self.file)
         self._load_time_open(lst)
 
     @handle_assignment
     def load_time_on(self):
-        lst = self._data_picker('###TIME_ON###', self.file)
+        lst = self._data_picker('---TIME_ON---', self.file)
         self._load_time_on(lst)
 
     @handle_assignment
     def load_icv_nr(self):
-        lst = self._data_picker('###ICV_NR###', self.file)
+        lst = self._data_picker('---ICV_NR---', self.file)
         self._load_icv_nr(lst)
 
     @handle_assignment
     def load_icv_operation(self):
-        lst = self._data_picker('###ICV_OPERATION###', self.file)
+        lst = self._data_picker('---ICV_OPERATION---', self.file)
         self._load_icv_operation(lst)
 
     @handle_assignment
     def load_icv_control_law(self):
-        lst = self._data_picker('###ICV_CONTROL_LAW###', self.file)
+        lst = self._data_picker('---ICV_CONTROL_LAW---', self.file)
         self._load_icv_control_law(lst)
 
     @handle_assignment
     def load_wag_operation(self):
-        lst = self._data_picker('###WAG_OPERATION###', self.file)
+        lst = self._data_picker('---WAG_OPERATION---', self.file)
         self._load_wag_operation(lst)
 
     @handle_lst
@@ -239,10 +239,16 @@ class Well_Spec:
             if line == keyword:
                 while True:
                     line = next(content)
-                    if line == '###END###':
+                    if line == '---END---':
                         return chunk
-                    chunk.append(line)
+                    elif self._comment(line):
+                        pass
+                    else:
+                        chunk.append(line)
         stg  = "Keyword '{}' not found in file '{}'.".format(keyword, file)
         stg += " Returning empty list."
         warnings.warn(stg)
         return []
+
+    def _comment(self, line):
+        return line.strip()[0] == '#'

@@ -1,26 +1,26 @@
-###GROUP###
+---GROUP---
 PRODUCTION
-###END###
+---END---
 
-###OPERATE###
+---OPERATE---
 *MAX, *STL, 3000.0, *CONT *REPEAT
 *MIN, *BHP,  295.0, *CONT *REPEAT
-###END###
+---END---
 
-###MONITOR###
+---MONITOR---
 *WCUT, 0.95, *SHUTIN
-** *MONITOR, *GOR, 3500.0, *SHUTIN
-###END###
+# *GOR, 3500.0, *SHUTIN
+---END---
 
-###GEOMETRY###
+---GEOMETRY---
 *K, 0.108, 0.370, 1.0, 0.0
-###END###
+---END---
 
-###PERF_FF###
+---PERF_FF---
 *GEOA
-###END###
+---END---
 
-###PERF_TABLE###
+---PERF_TABLE---
 23, 55, 01, 1.0, *OPEN
 23, 55, 02, 1.0, *OPEN
 23, 55, 03, 1.0, *OPEN
@@ -51,35 +51,35 @@ PRODUCTION
 23, 55, 28, 1.0, *OPEN
 23, 55, 29, 1.0, *OPEN
 23, 55, 30, 1.0, *OPEN
-###END###
+---END---
 
-###LAYERCLUMP###
+---LAYERCLUMP---
 23, 55, 01:11
 23, 55, 13:18
 23, 55, 20:30
-###END###
+---END---
 
-###TIME_OPEN###
-1308
-###END###
+---TIME_OPEN---
+# 1308
+---END---
 
-###TIME_ON###
+---TIME_ON---
 1.0
-###END###
+---END---
 
-###ICV_NR###
+---ICV_NR---
 3
-###END###
+---END---
 
-###ICV_OPERATION###
+---ICV_OPERATION---
 2008, 183, 200
-###END###
+---END---
 
-###ICV_CONTROL_LAW###
-1, ** *ON_CTRLLUMP __LAYER__ *GOR > 750, AND, *ON_CTRLLUMP __LAYER__ *GOR < 1250, 0.0
-1, ** *ON_CTRLLUMP __LAYER__ *WCUT > 0.95, 0.0
-2, ** *ON_CTRLLUMP __LAYER__ *GOR > 750, AND, *ON_CTRLLUMP __LAYER__ *GOR < 1250, 0.0
-2, ** *ON_CTRLLUMP __LAYER__ *WCUT > 0.95, 0.0
-3, ** *ON_CTRLLUMP __LAYER__ *GOR > 750, AND, *ON_CTRLLUMP __LAYER__ *GOR < 1250, 0.0
-3, ** *ON_CTRLLUMP __LAYER__ *WCUT > 0.95, 0.0
-###END###
+---ICV_CONTROL_LAW---
+# 1, *ON_CTRLLUMP __LAYER__ *GOR > 750, AND, *ON_CTRLLUMP __LAYER__ *GOR < 1250, 0.0
+# 1, *ON_CTRLLUMP __LAYER__ *WCUT > 0.95, 0.0
+# 2, *ON_CTRLLUMP __LAYER__ *GOR > 750, AND, *ON_CTRLLUMP __LAYER__ *GOR < 1250, 0.0
+# 2, *ON_CTRLLUMP __LAYER__ *WCUT > 0.95, 0.0
+# 3, *ON_CTRLLUMP __LAYER__ *GOR > 750, AND, *ON_CTRLLUMP __LAYER__ *GOR < 1250, 0.0
+# 3, *ON_CTRLLUMP __LAYER__ *WCUT > 0.95, 0.0
+---END---
