@@ -1,26 +1,26 @@
-###GROUP###
+---GROUP---
 INJECTION
-###END###
+---END---
 
-###OPERATE###
+---OPERATE---
 G, *MAX, *STG, 3000000.0, *CONT *REPEAT
 G, *MAX, *BHP,     480.0, *CONT *REPEAT
 W, *MAX, *STW,    5000.0, *CONT *REPEAT
 W, *MAX, *BHP,     470.0, *CONT *REPEAT
-###END###
+---END---
 
-###MONITOR###
-###END###
+---MONITOR---
+---END---
 
-###GEOMETRY###
+---GEOMETRY---
 *K, 0.108, 0.370, 1.0, 0.0
-###END###
+---END---
 
-###PERF_FF###
+---PERF_FF---
 *GEOA
-###END###
+---END---
 
-###PERF_TABLE###
+---PERF_TABLE---
 41, 30, 01, 1.0, *OPEN
 41, 30, 02, 1.0, *OPEN
 41, 30, 03, 1.0, *OPEN
@@ -51,30 +51,30 @@ W, *MAX, *BHP,     470.0, *CONT *REPEAT
 41, 30, 28, 1.0, *OPEN
 41, 30, 29, 1.0, *OPEN
 41, 30, 30, 1.0, *OPEN
-###END###
+---END---
 
-###LAYERCLUMP###
+---LAYERCLUMP---
 41, 30, 01:14
 41, 30, 17:30
-###END###
+---END---
 
-###TIME_OPEN###
-W, 1643
-###END###
+---TIME_OPEN---
+# W, 1643
+---END---
 
-###TIME_ON###
+---TIME_ON---
 0.98
-###END###
+---END---
 
-###ICV_NR###
-###END###
+---ICV_NR---
+---END---
 
-###ICV_OPERATION###
-###END###
+---ICV_OPERATION---
+---END---
 
-###ICV_CONTROL_LAW###
-###END###
+---ICV_CONTROL_LAW---
+---END---
 
-###WAG_OPERATION###
-G, 1918, 183, 100
-###END###
+---WAG_OPERATION---
+# G, 1918, 183, 100
+---END---

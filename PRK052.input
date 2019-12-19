@@ -54,8 +54,9 @@ PRODUCTION
 ---END---
 
 ---LAYERCLUMP---
-13, 40, 01:15
-13, 40, 18:30
+13, 40, 01:10
+13, 40, 12:38
+13, 40, 20:30
 ---END---
 
 ---TIME_OPEN---
@@ -71,7 +72,7 @@ PRODUCTION
 ---END---
 
 ---ICV_OPERATION---
-2008, 183, 200
+# 2008, 183, 200
 ---END---
 
 ---ICV_CONTROL_LAW---
